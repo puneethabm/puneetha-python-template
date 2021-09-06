@@ -79,9 +79,8 @@
     pdoc3 puneetha_python_template --force --html -o auto_generated/docstrings
     ```
 6. Generate mkdocs
-   # How to make MkDOcs
-   ### Configuration: https://www.mkdocs.org/user-guide/configuration/
-   ### Example: https://docs.civicrm.org/dev/en/latest/extensions/documentation/
+   ## Configuration: https://www.mkdocs.org/user-guide/configuration/
+   ## Example: https://docs.civicrm.org/dev/en/latest/extensions/documentation/
    
    ```shell
    # Start server:
@@ -89,11 +88,14 @@
    # Output: Serving on http://127.0.0.1:8000/
    ```
    
-   ### Deploy: https://www.mkdocs.org/user-guide/deploying-your-docs/
+   ## Deploy: https://www.mkdocs.org/user-guide/deploying-your-docs/
    ```shell
    mkdocs gh-deploy --clean --config-file  ./config/mkdocs.yml
    ```
    
+   ## Example view of the generated file
+   ![Mkdocs](./images/mkdocs.png)
+
 7. Build egg file
     ```shell
     python setup.py bdist_egg
