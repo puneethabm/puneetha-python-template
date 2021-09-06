@@ -1,0 +1,16 @@
+-   repo: local
+    hooks:
+        -   id: pydocstyle
+            name: pydocstyle
+            args: [--config=config/.pydocstylerc]
+            entry: pydocstyle
+            language: system
+            types: [python]
+
+        -   id: pylint
+            name: pylint
+            args: [-j 0, --load-plugins, pylint_quotes, --rcfile=config/.pylintrc]
+            entry: pylint
+            language: system
+            types: [python]
+

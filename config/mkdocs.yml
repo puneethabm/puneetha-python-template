@@ -1,0 +1,21 @@
+site_name: Project Project Template
+repo_url: https://github.com/puneethabm/puneethabm-python-template
+repo_name: "GitHub"
+site_description: "AWS Python Template"
+site_author: "Puneetha Bagivalu Manjegowda"
+
+docs_dir: ../project_docs
+site_dir: ../site
+
+nav:
+    -   Home: INDEX.md
+    -   "Dev Set Up": DEV_SETUP.md
+    -   "Project Structure": PROJECT_STRUCTURE.md
+    -   "Conventions": CONVENTIONS.md
+
+theme:
+    name: material
+
+plugins:
+    -   search:
+            lang: en
