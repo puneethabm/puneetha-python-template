@@ -78,14 +78,31 @@
     ```shell
     pdoc3 puneetha_python_template --force --html -o auto_generated/docstrings
     ```
-
-6. Build egg file
+6. Generate mkdocs
+   # How to make MkDOcs
+   ### Configuration: https://www.mkdocs.org/user-guide/configuration/
+   ### Example: https://docs.civicrm.org/dev/en/latest/extensions/documentation/
+   
+   ```shell
+   # Start server:
+   mkdocs serve --config-file ./config/mkdocs.yml
+   # Output: Serving on http://127.0.0.1:8000/
+   ```
+   
+   ### Deploy: https://www.mkdocs.org/user-guide/deploying-your-docs/
+   ```shell
+   mkdocs gh-deploy --clean --config-file  ./config/mkdocs.yml
+   ```
+   
+7. Build egg file
     ```shell
     python setup.py bdist_egg
    
     # (or) with install
     python setup.py install bdist_egg
     ```
+
+8. Loguru read more [here](https://readthedocs.org/projects/loguru/downloads/pdf/latest/)
 
 ---
 <!--END-->

@@ -7,10 +7,12 @@ site_author: "Puneetha Bagivalu Manjegowda"
 docs_dir: ../project_docs
 site_dir: ../site
 
+
 nav:
     -   Home: INDEX.md
     -   "Dev Set Up": DEV_SETUP.md
     -   "Project Structure": PROJECT_STRUCTURE.md
+    -   "Build process": BUILD_PROCESS.md
     -   "Conventions": CONVENTIONS.md
 
 theme:
