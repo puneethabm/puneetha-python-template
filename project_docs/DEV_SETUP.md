@@ -72,7 +72,7 @@ python -m pip install -U pip
 1. Key: PBM_LOG_FILE_PATH
    - Value example: "/var/log/data-engineering.log"
 
-**Note:** More environment variables information is [in this python environment mapper file](../puneetha-python-template/pbm_python_template/utils/constants/env_variable_mapper.py)
+**Note:** More environment variables information is [in this python environment mapper file](../puneetha_python_template/pbm_python_template/utils/constants/env_variable_mapper.py)
 
 ### Section 1: Set environment variables for running the programs
 Go to Run -> Edit Configurations -> Templates -> Python

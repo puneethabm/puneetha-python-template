@@ -7,8 +7,15 @@ pytest==5.3.2
 pytest-runner==5.2
 pytest-pylint==0.14.1
 coverage==5.0.2
+pytest-cov==2.8.1
 parameterized==0.8.1
 pdoc3==0.10.0
+unittest2==1.1.0
+
+# Python
+config==0.4.2
+envparse==0.2.0
+pandas==0.25.1
 
 # Logging
 loguru==0.5.3

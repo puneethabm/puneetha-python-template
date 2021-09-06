@@ -4,8 +4,8 @@ import os
 import sys
 from typing import Tuple
 
-from pbm_python_template.utils.constants.env_variable_mapper import EnvironmentVariableMapper
-from pbm_python_template.utils.custom_logger import CustomLogger
+from puneetha_python_template.pbm_python_template.utils.constants.env_variable_mapper import EnvironmentVariableMapper
+from puneetha_python_template.pbm_python_template.utils.custom_logger import CustomLogger
 
 
 class FileUtils(CustomLogger):
