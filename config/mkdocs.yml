@@ -9,7 +9,7 @@ site_dir: ../site
 
 
 nav:
-    -   Home: INDEX.md
+    -   Home: index.md
     -   "Dev Set Up": DEV_SETUP.md
     -   "Project Structure": PROJECT_STRUCTURE.md
     -   "Build process": BUILD_PROCESS.md
