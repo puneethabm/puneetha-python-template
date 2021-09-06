@@ -23,18 +23,18 @@
     pydocstyle --config=config/.pydocstylerc $PYDOCSTYLE_FILES
     
     ```
-   
-    ## Example view of the pydocstyle run
+
+   ## Example view of the pydocstyle run
     ```shell
     pydocstyle --config=config/.pydocstylerc puneetha_python_template
     ```
-    **Note**: When everything in package is adhering to standard, it will return no result. This means 100% success!
-    ![pydocstyle](./images/pydocstyle.png)
+   **Note**: When everything in package is adhering to standard, it will return no result. This means 100% success!
+   ![pydocstyle](./images/pydocstyle.png)
 
-    ## Example view of the pydocstyle run - Error scenario
-    ![pydocstyle](./images/pydocstyle-error.png)
+   ## Example view of the pydocstyle run - Error scenario
+   ![pydocstyle](./images/pydocstyle-error.png)
 
-4. Codestyle checker
+3. Codestyle checker
     ```shell
     # Simple test without config
     pylint <package_name>
@@ -52,12 +52,20 @@
     pylint -E --load-plugins pylint_quotes --rcfile=config/.pylintrc $PYLINT_FILES
     
     ```
-   
-    ## Example view of the pylint run
+
+   ## Example view of the pylint run
     ```shell
     pylint --load-plugins pylint_quotes --rcfile=config/.pylintrc puneetha_python_template
     ```
-    ![Pylint](./images/pylint-terminal.png)
+   ![Pylint](./images/pylint-terminal.png)
+
+   ## Export pylint results to html file - example with unnecessary newlines 
+    ```shell
+    pylint --load-plugins pylint_quotes --rcfile=config/.pylintrc --output-format=json puneetha_python_template | pylint-json2html -o auto_generated/pylint.html
+    ```
+
+
+   ![Pylint HTML](./images/pylint-html.png)
 
 5. Run tests
    ## Run test from config file:
@@ -79,11 +87,11 @@
     ```shell
     python -m unittest puneetha_python_template.tests.test_utils.test_general_utils.TestGeneralUtils
     ```
-    (or)
+   (or)
     ```shell
     python -m unittest puneetha_python_template/tests/test_utils/test_general_utils.py
     ```
-   
+
    ## Example view of the generated coverage file
    ![Coverage](./images/coverage.png)
 
@@ -104,18 +112,18 @@
 7. Generate mkdocs
    ## Configuration: https://www.mkdocs.org/user-guide/configuration/
    ## Example: https://docs.civicrm.org/dev/en/latest/extensions/documentation/
-   
+
    ```shell
    # Start server:
    mkdocs serve --config-file ./config/mkdocs.yml
    # Output: Serving on http://127.0.0.1:8000/
    ```
-   
+
    ## Deploy: https://www.mkdocs.org/user-guide/deploying-your-docs/
    ```shell
    mkdocs gh-deploy --clean --config-file  ./config/mkdocs.yml
    ```
-   
+
    ## Example view of the generated file
    ![Mkdocs](./images/mkdocs.png)
 
