@@ -56,6 +56,15 @@ Python template - Project structure.
 ---
 <!--END-->
 
+
+<!--BEGIN-->
+---
+
+# Build process [here](./project_docs/BUILD_PROCESS.md)
+
+---
+<!--END-->
+
 <!--BEGIN -->
 ---
 
