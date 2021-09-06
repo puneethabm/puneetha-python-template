@@ -61,7 +61,13 @@
 
    ## Run unittest from command line. Example:
     ```shell
-    python -m unittest pbm_python_template.tests.test_utils.test_python_utils.test_general_utils.TestGeneralUtils
+    cd puneetha-python-template
+    python -m unittest pbm_python_template.tests.test_utils.test_general_utils.TestGeneralUtils
+    ```
+    (or)
+    ```shell
+    cd puneetha-python-template
+    python -m unittest pbm_python_template/tests/test_utils/test_general_utils.py
     ```
 
 5. Generate docstring & publish
