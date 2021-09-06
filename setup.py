@@ -25,7 +25,7 @@ except AttributeError:
 
 VERSION = "1.0.0"
 
-setup(name="puneethabm-python-template",
+setup(name="puneetha-python-template",
       version=VERSION,
       author="Puneetha Bagivalu Manjegowda",
       author_email="puneethabm@gmail.com",
