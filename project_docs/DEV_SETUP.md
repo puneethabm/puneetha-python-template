@@ -117,6 +117,8 @@ Use the pre-commit hook for linting staged files prior to a commit (mandatory, t
 pre-commit install --hook-type pre-commit
 ```
 
+## Example
+![Pre-commit check](./images/pre-commit-check.png)
 ---
 <!--END-->
 
