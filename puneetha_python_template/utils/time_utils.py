@@ -2,8 +2,8 @@
 
 import datetime
 
-from puneetha_python_template.pbm_python_template.utils.constants.python_defaults import PythonDefaults
-from puneetha_python_template.pbm_python_template.utils.custom_logger import CustomLogger
+from puneetha_python_template.utils.constants.python_defaults import PythonDefaults
+from puneetha_python_template.utils.custom_logger import CustomLogger
 
 
 class TimeUtils(CustomLogger):

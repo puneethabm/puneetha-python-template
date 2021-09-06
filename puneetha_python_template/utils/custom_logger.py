@@ -5,8 +5,8 @@ import sys
 
 from loguru import logger
 
-from puneetha_python_template.pbm_python_template.utils.constants.env_variable_mapper import EnvironmentVariableMapper
-from puneetha_python_template.pbm_python_template.utils.constants.project_defaults import ProjectDefaults
+from puneetha_python_template.utils.constants.env_variable_mapper import EnvironmentVariableMapper
+from puneetha_python_template.utils.constants.project_defaults import ProjectDefaults
 
 
 class CustomLogger:

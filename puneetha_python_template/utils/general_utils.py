@@ -1,6 +1,6 @@
 """General utilities."""
 
-from puneetha_python_template.pbm_python_template.utils.custom_logger import CustomLogger
+from puneetha_python_template.utils.custom_logger import CustomLogger
 
 
 class GeneralUtils(CustomLogger):

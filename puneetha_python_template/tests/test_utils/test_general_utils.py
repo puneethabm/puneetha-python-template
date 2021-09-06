@@ -2,8 +2,8 @@
 
 from parameterized import parameterized
 
-from puneetha_python_template.pbm_python_template.tests.custom_unit_test import CustomUnitTest
-from puneetha_python_template.pbm_python_template.utils.general_utils import GeneralUtils
+from puneetha_python_template.tests.custom_unit_test import CustomUnitTest
+from puneetha_python_template.utils.general_utils import GeneralUtils
 
 
 class TestGeneralUtils(CustomUnitTest):
