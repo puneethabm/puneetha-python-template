@@ -3,7 +3,7 @@
 <!--BEGIN-->
 ---
 ```
-pbm_python_template -> Python template files
+puneetha_python_template -> Python template files
 ├── __init__.py -> initializes the application, indicated that this folder is a python module
 ├── ... -> Python files
 ├── utils -> Helper utilities/functions which can be used across projects
