@@ -39,7 +39,9 @@ puneetha_python_template -> Python template files
 |
 ├── .gitignore -> Instructs git to ignore the files/directories specified in this file
 |
-├── scripts -> general scripts, deployment scripts, etc.
+├── .pre-commit-config.yaml -> Managing and maintaining pre-commit hooks
+|
+├── scripts -> General scripts, deployment scripts, etc.
 |
 ├── project_docs -> detailed set of readme files for developers
 |   ├── images -> Images to be used in readme documents
@@ -58,6 +60,8 @@ puneetha_python_template -> Python template files
 |           └── hotfix.md -> Hotfix branch pull request template
 |      
 ├── dist -> Generated egg files -> Not committed to git
+|
+├── scratch -> Random adhoc stuff - Not committed to git
 |
 ├── auto_generated -> Auto Generate documents - Not committed to git
 ├── ├── docstrings  -> Docstrings -> Not committed to git
