@@ -1,4 +1,4 @@
-"""General utilities."""
+"""General utilities package."""
 
 from puneetha_python_template.utils.custom_logger import CustomLogger
 
