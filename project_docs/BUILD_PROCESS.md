@@ -23,12 +23,22 @@
     pydocstyle --config=config/.pydocstylerc $PYDOCSTYLE_FILES
     
     ```
+   
+    ## Example view of the pydocstyle run
+    ```shell
+    pydocstyle --config=config/.pydocstylerc puneetha_python_template
+    ```
+    **Note**: When everything in package is adhering to standard, it will return no result. This means 100% success!
+    ![pydocstyle](./images/pydocstyle.png)
 
-3. Codestyle checker
+    ## Example view of the pydocstyle run - Error scenario
+    ![pydocstyle](./images/pydocstyle-error.png)
+
+4. Codestyle checker
     ```shell
     # Simple test without config
     pylint <package_name>
-    
+    pylint --load-plugins pylint_quotes --rcfile=config/.pylintrc puneetha_python_template
     # Custom config
     pylint --load-plugins pylint_quotes --rcfile=config/.pylintrc <package_name>
     
@@ -42,8 +52,14 @@
     pylint -E --load-plugins pylint_quotes --rcfile=config/.pylintrc $PYLINT_FILES
     
     ```
+   
+    ## Example view of the pylint run
+    ```shell
+    pylint --load-plugins pylint_quotes --rcfile=config/.pylintrc puneetha_python_template
+    ```
+    ![Pylint](./images/pylint-terminal.png)
 
-4. Run tests
+5. Run tests
    ## Run test from config file:
     ```shell
     pytest -c ./config/tox.ini
@@ -67,8 +83,11 @@
     ```shell
     python -m unittest puneetha_python_template/tests/test_utils/test_general_utils.py
     ```
+   
+   ## Example view of the generated coverage file
+   ![Coverage](./images/coverage.png)
 
-5. Generate docstring & publish
+6. Generate docstring & publish
    ## Launch the docstring
     ```shell
     pdoc3 puneetha_python_template --http :8099
@@ -78,7 +97,11 @@
     ```shell
     pdoc3 puneetha_python_template --force --html -o auto_generated/docstrings
     ```
-6. Generate mkdocs
+
+   ## Example view of the generated file
+   ![Docstring](./images/docstring.png)
+
+7. Generate mkdocs
    ## Configuration: https://www.mkdocs.org/user-guide/configuration/
    ## Example: https://docs.civicrm.org/dev/en/latest/extensions/documentation/
    
@@ -96,7 +119,7 @@
    ## Example view of the generated file
    ![Mkdocs](./images/mkdocs.png)
 
-7. Build egg file
+8. Build egg file
     ```shell
     python setup.py bdist_egg
    
@@ -104,7 +127,7 @@
     python setup.py install bdist_egg
     ```
 
-8. Loguru read more [here](https://readthedocs.org/projects/loguru/downloads/pdf/latest/)
+9. Loguru read more [here](https://readthedocs.org/projects/loguru/downloads/pdf/latest/)
 
 ---
 <!--END-->
