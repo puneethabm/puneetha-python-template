@@ -23,15 +23,16 @@
     pydocstyle --config=config/.pydocstylerc $PYDOCSTYLE_FILES
     ```
 
-   ## Example view of the pydocstyle run
+    ## Example view of the pydocstyle run
     ```shell
     pydocstyle --config=config/.pydocstylerc puneetha_python_template
     ```
-   **Note**: When everything in package is adhering to standard, it will return no result. This means 100% success!
-   ![pydocstyle](./images/pydocstyle.png)
 
-   ## Example view of the pydocstyle run - Error scenario
-   ![pydocstyle](./images/pydocstyle-error.png)
+    **Note**: When everything in package is adhering to standard, it will return no result. This means 100% success!
+    ![pydocstyle](./images/pydocstyle.png)
+
+    ## Example view of the pydocstyle run - Error scenario
+    ![pydocstyle](./images/pydocstyle-error.png)
 
 3. Codestyle checker
     ```shell
@@ -51,41 +52,42 @@
     pylint -E --load-plugins pylint_quotes --rcfile=config/.pylintrc $PYLINT_FILES
     ```
 
-   ## Example view of the pylint run
+    ## Example view of the pylint run
     ```shell
     pylint --load-plugins pylint_quotes --rcfile=config/.pylintrc puneetha_python_template
     ```
-   ![Pylint](./images/pylint-terminal.png)
 
-   ## Export pylint results to html file - example with unnecessary newlines 
+    ![Pylint](./images/pylint-terminal.png)
+
+    ## Export pylint results to html file - example with unnecessary newlines 
     ```shell
     pylint --load-plugins pylint_quotes --rcfile=config/.pylintrc --output-format=json puneetha_python_template | pylint-json2html -o auto_generated/pylint.html
     ```
 
 
-   ![Pylint HTML](./images/pylint-html.png)
+    ![Pylint HTML](./images/pylint-html.png)
 
 5. Run tests
-   ## Run test from config file:
+    ## Run test from config file:
     ```shell
     pytest -c ./config/tox.ini
     ```
 
-   ## Run test from arguments
+    ## Run test from arguments
     ```shell
     pytest -c ./config/tox.ini --cov-report html:auto_generated/coverage --cov=usage
     ```
 
-   ## Run test for specific subpackage folder
+    ## Run test for specific subpackage folder
     ```shell
     pytest --cache-clear -p no:warnings  -rp --html=auto_generated/pytest_report.html --cov-report html:auto_generated/html_cov --ignore=puneetha_python_template/utils/custom_logger.py puneetha_python_template/utils
     ``` 
 
-   ## Run unittest from command line. Example:
+    ## Run unittest from command line. Example:
     ```shell
     python -m unittest puneetha_python_template.tests.test_utils.test_general_utils.TestGeneralUtils
     ```
-   (or)
+    (or)
     ```shell
     python -m unittest puneetha_python_template/tests/test_utils/test_general_utils.py
     ```
@@ -94,18 +96,18 @@
    ![Coverage](./images/coverage.png)
 
 6. Generate docstring & publish
-   ## Launch the docstring
+    ## Launch the docstring
     ```shell
     pdoc3 puneetha_python_template --http :8099
     ```
 
-   ## Save the docstring to a html file
+    ## Save the docstring to a html file
     ```shell
     pdoc3 puneetha_python_template --force --html -o auto_generated/docstrings
     ```
 
-   ## Example view of the generated file
-   ![Docstring](./images/docstring.png)
+    ## Example view of the generated file
+    ![Docstring](./images/docstring.png)
 
 7. Generate mkdocs
    ## Configuration: https://www.mkdocs.org/user-guide/configuration/
