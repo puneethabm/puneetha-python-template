@@ -330,16 +330,14 @@
 echo PYDOCSTYLE_FILES
 pydocstyle --config=config/.pydocstylerc $PYDOCSTYLE_FILES
 ```</p>
+<h2 id="example-view-of-the-pydocstyle-run">Example view of the pydocstyle run</h2>
+<p><code>shell
+pydocstyle --config=config/.pydocstylerc puneetha_python_template</code></p>
+<p><strong>Note</strong>: When everything in package is adhering to standard, it will return no result. This means 100% success!
+<img alt="pydocstyle" src="../images/pydocstyle.png" /></p>
+<h2 id="example-view-of-the-pydocstyle-run-error-scenario">Example view of the pydocstyle run - Error scenario</h2>
+<p><img alt="pydocstyle" src="../images/pydocstyle-error.png" /></p>
 </li>
-</ol>
-<p>## Example view of the pydocstyle run
-    <code>shell
-    pydocstyle --config=config/.pydocstylerc puneetha_python_template</code>
-   <strong>Note</strong>: When everything in package is adhering to standard, it will return no result. This means 100% success!
-   <img alt="pydocstyle" src="../images/pydocstyle.png" /></p>
-<p>## Example view of the pydocstyle run - Error scenario
-   <img alt="pydocstyle" src="../images/pydocstyle-error.png" /></p>
-<ol>
 <li>
 <p>Codestyle checker
     ```shell
@@ -356,51 +354,53 @@ pydocstyle --config=config/.pydocstylerc $PYDOCSTYLE_FILES
 echo $PYLINT_FILES
 pylint -E --load-plugins pylint_quotes --rcfile=config/.pylintrc $PYLINT_FILES
 ```</p>
+<h2 id="example-view-of-the-pylint-run">Example view of the pylint run</h2>
+<p><code>shell
+pylint --load-plugins pylint_quotes --rcfile=config/.pylintrc puneetha_python_template</code></p>
+<p><img alt="Pylint" src="../images/pylint-terminal.png" /></p>
+<h2 id="export-pylint-results-to-html-file-example-with-unnecessary-newlines">Export pylint results to html file - example with unnecessary newlines</h2>
+<p><code>shell
+pylint --load-plugins pylint_quotes --rcfile=config/.pylintrc --output-format=json puneetha_python_template | pylint-json2html -o auto_generated/pylint.html</code></p>
+<p><img alt="Pylint HTML" src="../images/pylint-html.png" /></p>
+</li>
+<li>
+<p>Run tests
+    ## Run test from config file:
+    <code>shell
+    pytest -c ./config/tox.ini</code></p>
+<h2 id="run-test-from-arguments">Run test from arguments</h2>
+<p><code>shell
+pytest -c ./config/tox.ini --cov-report html:auto_generated/coverage --cov=usage</code></p>
+<h2 id="run-test-for-specific-subpackage-folder">Run test for specific subpackage folder</h2>
+<p><code>shell
+pytest --cache-clear -p no:warnings  -rp --html=auto_generated/pytest_report.html --cov-report html:auto_generated/html_cov --ignore=puneetha_python_template/utils/custom_logger.py puneetha_python_template/utils</code> </p>
+<h2 id="run-unittest-from-command-line-example">Run unittest from command line. Example:</h2>
+<p><code>shell
+python -m unittest puneetha_python_template.tests.test_utils.test_general_utils.TestGeneralUtils</code>
+(or)
+<code>shell
+python -m unittest puneetha_python_template/tests/test_utils/test_general_utils.py</code></p>
 </li>
 </ol>
-<p>## Example view of the pylint run
-    <code>shell
-    pylint --load-plugins pylint_quotes --rcfile=config/.pylintrc puneetha_python_template</code>
-   <img alt="Pylint" src="../images/pylint-terminal.png" /></p>
-<p>## Export pylint results to html file - example with unnecessary newlines 
-    <code>shell
-    pylint --load-plugins pylint_quotes --rcfile=config/.pylintrc --output-format=json puneetha_python_template | pylint-json2html -o auto_generated/pylint.html</code></p>
-<p><img alt="Pylint HTML" src="../images/pylint-html.png" /></p>
-<ol>
-<li>Run tests
-   ## Run test from config file:
-    <code>shell
-    pytest -c ./config/tox.ini</code></li>
-</ol>
-<p>## Run test from arguments
-    <code>shell
-    pytest -c ./config/tox.ini --cov-report html:auto_generated/coverage --cov=usage</code></p>
-<p>## Run test for specific subpackage folder
-    <code>shell
-    pytest --cache-clear -p no:warnings  -rp --html=auto_generated/pytest_report.html --cov-report html:auto_generated/html_cov --ignore=puneetha_python_template/utils/custom_logger.py puneetha_python_template/utils</code> </p>
-<p>## Run unittest from command line. Example:
-    <code>shell
-    python -m unittest puneetha_python_template.tests.test_utils.test_general_utils.TestGeneralUtils</code>
-   (or)
-    <code>shell
-    python -m unittest puneetha_python_template/tests/test_utils/test_general_utils.py</code></p>
 <p>## Example view of the generated coverage file
    <img alt="Coverage" src="../images/coverage.png" /></p>
 <ol>
-<li>Generate docstring &amp; publish
-   ## Launch the docstring
+<li>
+<p>Generate docstring &amp; publish
+    ## Launch the docstring
     <code>shell
-    pdoc3 puneetha_python_template --http :8099</code></li>
-</ol>
-<p>## Save the docstring to a html file
-    <code>shell
-    pdoc3 puneetha_python_template --force --html -o auto_generated/docstrings</code></p>
-<p>## Example view of the generated file
-   <img alt="Docstring" src="../images/docstring.png" /></p>
-<ol>
-<li>Generate mkdocs
+    pdoc3 puneetha_python_template --http :8099</code></p>
+<h2 id="save-the-docstring-to-a-html-file">Save the docstring to a html file</h2>
+<p><code>shell
+pdoc3 puneetha_python_template --force --html -o auto_generated/docstrings</code></p>
+<h2 id="example-view-of-the-generated-file">Example view of the generated file</h2>
+<p><img alt="Docstring" src="../images/docstring.png" /></p>
+</li>
+<li>
+<p>Generate mkdocs
    ## Configuration: https://www.mkdocs.org/user-guide/configuration/
-   ## Example: https://docs.civicrm.org/dev/en/latest/extensions/documentation/</li>
+   ## Example: https://docs.civicrm.org/dev/en/latest/extensions/documentation/</p>
+</li>
 </ol>
 <p><code>shell
    # Start server:
