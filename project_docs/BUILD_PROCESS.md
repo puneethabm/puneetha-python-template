@@ -21,7 +21,6 @@
     PYDOCSTYLE_FILES=$(find puneetha_python_template/utils -type f -name "*.py")
     echo PYDOCSTYLE_FILES
     pydocstyle --config=config/.pydocstylerc $PYDOCSTYLE_FILES
-    
     ```
 
    ## Example view of the pydocstyle run
@@ -50,7 +49,6 @@
     PYLINT_FILES=$(find puneetha_python_template/utils -type f -name "*.py")
     echo $PYLINT_FILES
     pylint -E --load-plugins pylint_quotes --rcfile=config/.pylintrc $PYLINT_FILES
-    
     ```
 
    ## Example view of the pylint run
