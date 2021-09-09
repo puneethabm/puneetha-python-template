@@ -1,7 +1,7 @@
 site_name: Project Project Template
 repo_url: https://github.com/puneethabm/puneetha-python-template
-repo_name: "GitHub"
-site_description: "AWS Python Template"
+repo_name: "puneetha-python-template"
+site_description: "Python Project Template"
 site_author: "Puneetha Bagivalu Manjegowda"
 
 docs_dir: ../project_docs
